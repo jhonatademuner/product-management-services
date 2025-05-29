@@ -22,6 +22,19 @@ spring:
           uri: http://localhost:8070
           predicates:
             - Path=/api/v1/stock/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOriginPatterns:
+              - "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
 
 management:
   tracing:
