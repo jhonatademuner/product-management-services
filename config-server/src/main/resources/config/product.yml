@@ -18,6 +18,8 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     database: postgresql
+    hibernate:
+      ddl-auto: update
 
 management:
   tracing:
